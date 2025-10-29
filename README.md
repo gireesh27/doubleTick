@@ -33,7 +33,7 @@ A sleek and responsive **Customer Management Dashboard** built using **React**, 
 ---
 
 ## 📁 Project Structure
-
+```
 ├── src/
 │   ├── assets/
 │   │   ├── DoubleTick_Logo.svg
@@ -54,7 +54,7 @@ A sleek and responsive **Customer Management Dashboard** built using **React**, 
 │   └── index.html
 ├── package.json
 └── README.md
-
+```
 
 
 ## ⚙️ Installation & Setup
