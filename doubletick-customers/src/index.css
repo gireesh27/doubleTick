@@ -1,0 +1,351 @@
+/* ====== Global Container ====== */
+.container {
+  width: 100%;
+  max-width:95vw;
+  margin: auto auto;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1rem;
+}
+
+/* ===== Navbar (Logo + Divider) ===== */
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 0.5rem;
+}
+
+.logo {
+  width: 10rem; /* smaller & balanced */
+  height: auto;
+  display: block;
+}
+
+/* ===== Horizontal Divider ===== */
+.divider {
+  border: none;
+  border-top: 0.1rem solid #e5e7eb;
+  margin: 0;
+  width: 100vw; /* full-width line */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* centers it */
+  margin-right: -50vw;
+}
+
+/* ===== Customer Section ===== */
+.customer-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0; /* remove top spacing */
+}
+
+.customer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.25rem 0; /* minimal spacing above/below */
+}
+
+.badge {
+  background-color: #e5f7ec;
+  color: #0a9447;
+  font-size: 0.875rem; /* ~14px */
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
+}
+
+/* ===== Actions (Search + Filters) ===== */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /* ~10px */
+  margin: 0.5rem 0 0.75rem 0; /* slight breathing space */
+}
+
+/* ====== Search Bar ====== */
+.search {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.9rem;
+  width: 15rem;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.search:focus {
+  border-color: #0a9447;
+  box-shadow: 0 0 0 2px rgba(10, 148, 71, 0.1);
+}
+
+/* ===== Search Bar Styling ===== */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 240px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+  pointer-events: none; /* ensures clicks focus the input */
+}
+
+.search-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px 8px 36px; /* left padding for icon space */
+  font-size: 0.9rem;
+  outline: none;
+  color: #111827;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+}
+
+/* ====== Filters Dropdown ====== */
+.filters-dropdown {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  color: #374151;
+  transition: background 0.2s ease;
+}
+
+.filters-dropdown:hover {
+  background: #f9fafb;
+}
+
+/* ====== Table Card ====== */
+.customers-table {
+  width: 100%;
+  border-collapse: separate; /* allows independent card border */
+  border-spacing: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  margin-top: 0.25rem;
+}
+
+.customers-table thead {
+  background: #f9fafb;
+}
+
+.customers-table th {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.customers-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.customers-table tr.hover-row:hover {
+  background-color: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+/* ====== Subtle Hover Glow ====== */
+.customers-table:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== Checkbox ====== */
+.customers-table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ====== Customer Cell ====== */
+.customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-cell .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.customer-cell .name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.customer-cell .sub {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ====== Added By Section ====== */
+.added-by {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.added-by .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.added-by-text {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .search {
+    width: 180px;
+  }
+
+  .customers-table th,
+  .customers-table td {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .customers-table th:nth-child(3),
+  .customers-table td:nth-child(3) {
+    display: none; /* hide Score column */
+  }
+}
+/* ===== Filters Dropdown ===== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown-btn:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.filter-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.arrow {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-left: 4px;
+}
+
+/* ===== Menu Styles ===== */
+.dropdown-menu {
+  list-style: none; /* ✅ removes bullet dots */
+  margin: 0;
+  padding: 4px 0;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  min-width: 160px;
+  z-index: 10;
+  animation: fadeIn 0.15s ease-in;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+/* subtle dropdown fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
